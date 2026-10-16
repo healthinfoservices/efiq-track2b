@@ -1,0 +1,55 @@
+# example.fhir.siu2fhir.au#0.1.0: HL7 v2 SIU to FHIR Appointment - AU Core (Proof of Concept)
+
+## Pages
+
+* [Home](index.md)
+* [HL7 v2 to FHIR Mapping](mapping.md)
+* [Worked Example](lifecycle.md)
+* [Building This Guide](building.md)
+* [Local Registry](registry.md)
+* [Open Issues](open-issues.md)
+* [Message Processing and Acknowledgements](messaging.md)
+* [Artifacts Summary](artifacts.md)
+* [AU Core Conformance](au-core.md)
+* [Architecture](architecture.md)
+
+## Resources
+
+### ValueSets
+
+* [Appointment Identifier Type](ValueSet-appointment-identifier-type.md)
+
+### Resource Profiles
+
+* [SIU AU Appointment](StructureDefinition-siu-au-appointment.md)
+
+### Extensions
+
+* [Source Message Control ID](StructureDefinition-source-message-control-id.md)
+* [Source Message Date/Time](StructureDefinition-source-message-datetime.md)
+
+### ConceptMaps
+
+* [HL7 v2 Administrative Sex (0001) to FHIR AdministrativeGender](ConceptMap-HL70001ToAdministrativeGender.md)
+* [HL7 v2 Filler Status (0278) to FHIR AppointmentStatus](ConceptMap-HL70278ToAppointmentStatus.md)
+
+### ImplementationGuides
+
+* [HL7 v2 SIU to FHIR Appointment - AU Core (Proof of Concept)](index.md)
+
+### Examples
+
+* [appointment-fil2001-after-s12 (Appointment)](Appointment-appointment-fil2001-after-s12.md)
+* [appointment-fil2001-after-s13 (Appointment)](Appointment-appointment-fil2001-after-s13.md)
+* [appointment-fil2001-after-s14 (Appointment)](Appointment-appointment-fil2001-after-s14.md)
+* [appointment-fil2001-after-s15 (Appointment)](Appointment-appointment-fil2001-after-s15.md)
+* [appointment-fil2002 (Appointment)](Appointment-appointment-fil2002.md)
+* [appointment-fil2003 (Appointment)](Appointment-appointment-fil2003.md)
+* [Outpatient Clinic 1 (Location)](Location-location-simhosp-opd-clinic1.md)
+* [Physio Room 1 (Location)](Location-location-simhosp-opd-physio1.md)
+* [Simulated Hospital (Organization)](Organization-organization-simhosp.md)
+* [patient-900001 (Patient)](Patient-patient-900001.md)
+* [patient-900002 (Patient)](Patient-patient-900002.md)
+* [patient-900003 (Patient)](Patient-patient-900003.md)
+* [practitioner-2426621b (Practitioner)](Practitioner-practitioner-2426621b.md)
+* [practitioner-8003619900004562 (Practitioner)](Practitioner-practitioner-8003619900004562.md)

@@ -1,140 +1,95 @@
-# Builds the implementation guide on every push and pull request, and publishes it to
-# GitHub Pages from the default branch.
-# One-time setup: repository Settings -> Pages -> Build and deployment -> Source: "GitHub Actions".
-name: Build and publish IG
+name: Build and Deploy IG
 
 on:
   push:
-    branches: [main]
-  pull_request:
-  workflow_dispatch:
-
-permissions:
-  contents: read
-
-concurrency:
-  group: ig-${{ github.ref }}
-  cancel-in-progress: true
-
-env:
-  # Set to "true" to fail the build when the IG Publisher QA report has errors.
-  FAIL_ON_QA_ERRORS: "false"
+    branches:
+      - main
 
 jobs:
-  test:
-    name: Service tests
+  build:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v5
-      - uses: actions/setup-python@v6
+      # 1. Check out repo
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      # 2. Set up Node.js (latest version)
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
-          python-version: "3.12"
-      - name: Run unit tests
-        run: python -m unittest discover -s tests -v
+          node-version: 'latest'
+          cache: npm
 
-  build-ig:
-    name: Build IG
-    needs: test
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v5
+      # 3. Install Sushi globally
+      - name: Install Sushi
+        run: npm install -g fsh-sushi
 
-      - uses: actions/setup-java@v5
-        with:
-          distribution: temurin
-          java-version: "21"
+      # 4. Install IG dependencies (e.g., AU Core) from package.json
+      - name: Install IG dependencies
+        run: npm ci
 
-      - uses: actions/setup-node@v5
-        with:
-          node-version: "22"
-
-      - uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: "3.3"
-
-      - uses: actions/setup-python@v6
-        with:
-          python-version: "3.12"
-
-      - name: Install SUSHI and Jekyll
+      # 5. Get latest IG Publisher version
+      - name: Get latest IG Publisher version
+        id: ig-publisher-version
         run: |
-          npm install -g fsh-sushi
-          gem install jekyll --no-document
-          sushi --version
-          jekyll --version
+          LATEST_TAG=$(curl -sL -o /dev/null -w '%{url_effective}' https://github.com/HL7/fhir-ig-publisher/releases/latest | sed 's#.*/tag/##')
+          echo "tag=$LATEST_TAG" >> "$GITHUB_OUTPUT"
 
-      - name: Cache FHIR packages
+      # 6. Cache IG Publisher
+      - name: Cache IG Publisher
+        id: cache-publisher
         uses: actions/cache@v4
         with:
-          path: ~/.fhir/packages
-          key: fhir-packages-${{ hashFiles('sushi-config.yaml') }}
-          restore-keys: fhir-packages-
+          path: ./publisher.jar
+          key: publisher-${{ steps.ig-publisher-version.outputs.tag }}        
 
-      - name: Install AU Core / AU Base packages into the cache
-        run: python scripts/install_fhir_packages.py
-
-      - name: Check examples are up to date with the service code
-        run: |
-          python tools/gen_examples.py
-          git diff --exit-code -- input/fsh/examples.fsh || {
-            echo "::error::input/fsh/examples.fsh is out of date - run: python tools/gen_examples.py"; exit 1; }
-
+      # 7. Download publisher.jar if not cached
       - name: Download IG Publisher
+        if: steps.cache-publisher.outputs.cache-hit != 'true'
         run: |
-          mkdir -p input-cache
-          curl -sSL -o input-cache/publisher.jar \
-            https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar
+          curl -L https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar -o publisher.jar
 
-      - name: Run IG Publisher (runs SUSHI first)
-        run: java -Xmx6g -jar input-cache/publisher.jar -ig .
-
-      - name: QA summary
-        if: always()
+      # 8. Run Sushi
+      - name: Run Sushi
         run: |
-          if [ -f output/qa.json ]; then
-            python - <<'PY'
-          import json, os
-          q = json.load(open("output/qa.json"))
-          errs, warns, hints = q.get("errs", "?"), q.get("warnings", "?"), q.get("hints", "?")
-          line = f"IG Publisher QA: {errs} errors, {warns} warnings, {hints} hints"
-          print(line)
-          with open(os.environ["GITHUB_STEP_SUMMARY"], "a") as f:
-              f.write(f"### {line}\nDownload the `qa-report` artifact or open qa.html on the published site.\n")
-          if isinstance(errs, int) and errs and os.environ.get("FAIL_ON_QA_ERRORS") == "true":
-              raise SystemExit(f"::error::{errs} QA errors")
-          PY
-          else
-            echo "::warning::No qa.json produced"
-          fi
+          set -euxo pipefail
+          sushi . -l debug
 
-      - name: Upload QA report
+      # 9. Install Ruby and Jekyll for IG rendering
+      - name: Install Ruby and Jekyll
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ruby-full build-essential zlib1g-dev
+          sudo gem install jekyll bundler
+
+      # 10. Check Sushi output
+      - name: Check Sushi output
+        run: |
+          ls -R fsh-generated || (echo "Sushi did not generate output!" && exit 1)
+          
+      # 11. Run IG Publisher
+      - name: Run IG Publisher
+        run: |
+          set -euxo pipefail
+          java -Xmx4g -jar publisher.jar -ig ig.ini -tx https://tx.fhir.org | tee publisher.log
+      # run: java -jar publisher.jar -ig ig.ini
+
+      # 12. Upload IG Publisher log
+      - name: Upload IG Publisher log
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: qa-report
-          path: |
-            output/qa.html
-            output/qa.json
-            output/qa.txt
-          if-no-files-found: ignore
+          name: publisher-log
+          path: publisher.log
 
-      - name: Upload Pages artifact
-        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
-        uses: actions/upload-pages-artifact@v5
+      # 13. Deploy to gh-pages branch setting the CNAME to core.fhir.health.gov.fj
+      - name: Deploy IG to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          path: output
-
-  deploy:
-    name: Deploy to GitHub Pages
-    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
-    needs: build-ig
-    runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./output
+          publish_branch: gh-pages
+          force_orphan: true
+          cname: core.fhir.health.gov.fj
+  

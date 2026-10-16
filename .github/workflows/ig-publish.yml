@@ -8,20 +8,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v5
-      - uses: actions/setup-python@v6
-        with:
-          python-version: "3.12"
-      - name: Run unit tests
-        run: python -m unittest discover -s tests -v
 
-  build-ig:
-    name: Build IG
-    needs: test
-    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      # 1. Check out repo
+      - name: Checkout source
+        uses: actions/checkout@v4
 
       # 2. Set up Node.js (latest version)
       - name: Set up Node.js

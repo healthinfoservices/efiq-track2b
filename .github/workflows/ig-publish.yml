@@ -91,4 +91,4 @@ jobs:
           publish_dir: ./output
           publish_branch: gh-pages
           force_orphan: true
-          cname: track2b.efiq.example.com
+

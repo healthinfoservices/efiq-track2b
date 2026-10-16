@@ -8,30 +8,41 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      # 1. Check out repo
-      - name: Checkout source
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Run unit tests
+        run: python -m unittest discover -s tests -v
+
+  build-ig:
+    name: Build IG
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
 
       # 2. Set up Node.js (latest version)
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 'latest'
-          cache: npm
+          distribution: temurin
+          java-version: "21"
 
-      # 3. Install Sushi globally
-      - name: Install Sushi
-        run: npm install -g fsh-sushi
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "22"
 
-      # 4. Install IG dependencies (e.g., AU Core) from package.json
-      - name: Install IG dependencies
-        run: npm ci
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
 
-      # 5. Get latest IG Publisher version
-      - name: Get latest IG Publisher version
-        id: ig-publisher-version
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install SUSHI and Jekyll
         run: |
           LATEST_TAG=$(curl -sL -o /dev/null -w '%{url_effective}' https://github.com/HL7/fhir-ig-publisher/releases/latest | sed 's#.*/tag/##')
           echo "tag=$LATEST_TAG" >> "$GITHUB_OUTPUT"
@@ -78,7 +89,7 @@ jobs:
       # 12. Upload IG Publisher log
       - name: Upload IG Publisher log
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: publisher-log
           path: publisher.log
@@ -87,9 +98,19 @@ jobs:
       - name: Deploy IG to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./output
-          publish_branch: gh-pages
-          force_orphan: true
-          cname: core.fhir.health.gov.fj
-  
+          path: output
+
+  deploy:
+    name: Deploy to GitHub Pages
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: build-ig
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

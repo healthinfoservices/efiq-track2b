@@ -36,8 +36,7 @@ The key assumption: **every facility's Organization is already on the FHIR serve
 If an Organization is missing despite A3, the adapter SHALL either create a placeholder Organization (section 6.8) or reject the message with AE; the choice is the team's. State which option you chose when you register for the track.
 
 ## 3. Architecture overview
-
-&#91;embedded content: adapter architecture · 3 components, 8 steps\]
+![Track 2B adapter architecture](track2b-architecture.svg)
 
 The adapter only reads Organizations; the one exception is a placeholder, created when a facility is missing by teams that choose that option (F5). Everything else is written with conditional updates, so a replayed message changes nothing. A front end reads the server directly and is outside this track.
 

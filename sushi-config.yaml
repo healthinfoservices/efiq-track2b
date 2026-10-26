@@ -34,6 +34,8 @@ pages:
     title: Architecture
   au-core.md:
     title: AU Core Conformance
+  adapter-specification.md:
+    title: Adapter Specification
   mapping.md:
     title: HL7 v2 to FHIR Mapping
   registry.md:
@@ -50,6 +52,7 @@ pages:
 menu:
   Home: index.html
   AU Core: au-core.html
+  Adapter Specification: adapter-specification.html
   Mapping: mapping.html
   Processing: messaging.html
   Worked Example: lifecycle.html

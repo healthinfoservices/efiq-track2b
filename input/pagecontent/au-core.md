@@ -18,7 +18,9 @@ AU Core requires some elements even when the source doesn't know the value. Code
 IHI, Medicare card number, HPI-I and Medicare provider number are mapped to the AU Base identifier profiles, with their fixed systems and type codes.
 IHI and HPI-I values are checked (16 digits, prefix, Luhn) and Medicare numbers must be 10 or 11 digits. A value failing its check is dropped (IHI, Medicare) or kept as a local identifier (HPI-I), with a warning, so that an invalid number never reaches the server under a national system.
 
-The service recognises these from Australian HL7 v2 conventions: IHI as `^^^AUSHIC^NI`, Medicare as `^^^AUSHIC^MC`, HPI-I as XCN.13 `NPI`, Medicare provider number as XCN.9 `AUSHICPR`. These conventions should be confirmed with the sending system (see [Open Issues](open-issues.html)).
+MRNs (PID-3.5 `MR`) are sent as plain identifiers with the system `http://example.org/fhir/sid/mrn/` + PID-3.4 and no assigner, so they don't claim the AU Base Medical Record Number profile (which needs `assigner.display`). That is allowed by AU Core Patient.
+
+The service recognises the national identifiers from Australian HL7 v2 conventions: IHI as `^^^AUSHIC^NI`, Medicare as `^^^AUSHIC^MC`, HPI-I as XCN.13 `NPI`, Medicare provider number as XCN.9 `AUSHICPR`. These conventions should be confirmed with the sending system (see [Open Issues](open-issues.html)).
 
 ### Must Support elements populated when known
 
@@ -30,7 +32,8 @@ The service recognises these from Australian HL7 v2 conventions: IHI as `^^^AUSH
 | `Patient.address` (Australian Address) | PID-11, normalised |
 | `Location.type` | AIL-4, translated via the registry |
 | `Location.physicalType` | Derived from AIL-3 (bed / room / point of care) |
-| `Location.managingOrganization` → AU Core Organization | AIL-3.4 facility + registry |
+| `Location.managingOrganization` → AU Core Organization | AIL-3.4 facility, looked up on the FHIR server (placeholder if missing) |
+| `Location.address` | Copied from that Organization's first address |
 {:.grid}
 
 Must Support elements with no SIU v2.5 source (for example gender identity and pronouns) are left out, as AU Core's *populate-if-known* obligation allows.

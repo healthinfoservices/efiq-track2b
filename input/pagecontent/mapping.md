@@ -55,7 +55,8 @@ Profile: [AU Core Patient](https://hl7.org.au/fhir/core/StructureDefinition-au-c
 | PID-3, CX.5 = `NI` (CX.4 `AUSHIC`) | `identifier` (AU IHI) | system `http://ns.electronichealth.net.au/id/hi/ihi/1.0`, type v2-0203 `NI`. Must be 16 digits, start 800360 and pass the Luhn check, otherwise it is dropped with a warning |
 | PID-3, CX.5 = `MC` | `identifier` (AU Medicare Card Number) | system `http://ns.electronichealth.net.au/id/medicare-number`, type `MC`; 10 or 11 digits, otherwise dropped. CX.8 → `period.end` |
 | PID-3, CX.4 = `AUSDVA` | `identifier` (generic) | AU DVA Number needs a DVA entitlement type that SIU doesn't carry, so it's kept as a local identifier with a warning |
-| PID-3, CX.5 = `MR` / `PI` | `identifier` (AU Medical Record Number / AU Patient Internal Identifier) | system and `assigner.display` from the [local registry](registry.html) for CX.4; without a registry entry the identifier is sent without an assigner |
+| PID-3, CX.5 = `MR` | `identifier` | system `http://example.org/fhir/sid/mrn/{CX.4}` (fixed rule; `MRN_SYSTEM_BASE` configurable), type `MR`. No assigner, so it is a plain identifier in AU Core Patient rather than the AU Medical Record Number profile |
+| PID-3, CX.5 = `PI` | `identifier` | `{base}/patient/{CX.4}/PI`, type `PI`, no assigner |
 | PID-3, other types | `identifier` | `{base}/patient/{CX.4}/{CX.5}` |
 | PID-5 | `name` | As the base mapping, plus `name.text`. If no name has a family name, an extra name holding only a data-absent-reason extension is added (au-core-pat-02 / au-core-pat-03) |
 | PID-7 | `birthDate` | Mandatory in AU Core: if empty, `_birthDate` carries data-absent-reason `unknown`. Invalid values → `AE` |
@@ -89,7 +90,8 @@ Profile: [AU Core Practitioner](https://hl7.org.au/fhir/core/StructureDefinition
 | AIL-3.9 | `Location.name` | Falls back to the identifier parts |
 | AIL-4 | `Location.type` | Translated with the registry's `locationTypes` to ServiceDeliveryLocationRoleType - AU Extended; untranslated codes are sent as local codes with a warning |
 | AIL-3 bed / room / point of care | `Location.physicalType` | Most specific part present → `bd` / `ro` / `wa` (location-physical-type) |
-| AIL-3.4 (facility) | `Location.managingOrganization` → AU Core Organization | One Organization per facility code: identifier `{base}/organization`, `name` (and optional HPI-O and address) from the registry; facility code used as name if not configured |
+| AIL-3.4 (facility) | `Location.managingOrganization` → AU Core Organization | Looked up on the FHIR server by `http://example.org/fhir/sid/organization` + facility code and used unchanged. If none exists, a placeholder (name = facility code, tag `placeholder`) is created with a conditional create. The service never modifies an existing Organization |
+| (from the Organization) | `Location.address` | The Organization's first address, if it has one |
 {:.grid}
 
 `{base}` is the configurable identifier system base (`IDENTIFIER_SYSTEM_BASE`, default `http://example.org/fhir/sid`).

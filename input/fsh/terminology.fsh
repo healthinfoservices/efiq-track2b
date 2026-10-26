@@ -93,3 +93,12 @@ Description: "The mapping the ingestion service applies to PID-8. The A and N ma
 * group[0].element[5].target[0].code = #unknown
 * group[0].element[5].target[0].equivalence = #inexact
 * group[0].element[5].target[0].comment = "Not applicable mapped to unknown."
+
+CodeSystem: SIU2FHIRTag
+Id: siu2fhir-tag
+Title: "SIU2FHIR Resource Tags"
+Description: "Tags (meta.tag) the ingestion service puts on resources it creates."
+* ^caseSensitive = true
+* ^experimental = true
+* ^status = #draft
+* #placeholder "Placeholder" "Created from an SIU message because no matching resource existed on the FHIR server. Expected to be curated (name, address, identifiers) by an administrator; the service never overwrites it."

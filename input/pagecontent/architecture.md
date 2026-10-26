@@ -33,11 +33,11 @@
 2. Map the message to resources. If required data is missing, reply `AE`.
 3. Search HAPI for an existing Appointment by its filler (SCH-2) or placer (SCH-1) identifier.
 4. If that Appointment has a later [source message date/time](StructureDefinition-source-message-datetime.html) than this message's MSH-7, reply `AA` and change nothing.
-5. Create or update the Patient, Practitioner, Organization and Location resources (in that order) with conditional updates. Each Location references its facility's Organization.
+5. Look up each facility's Organization on the server (creating a tagged placeholder only if it's missing), then create or update the Patient, Practitioner and Location resources with conditional updates. Each Location references its facility's Organization and takes its address.
 6. Build the Appointment, referencing the server ids from step 5, and write it.
 7. Reply `AA`.
 
-Facts SIU doesn't carry (organisation names, MRN namespaces, HPI-Os, location type translations) come from the [local registry](registry.html).
+Facility details (name, address, HPI-O) come from Organizations held on the FHIR server. MRN identifier systems are built by a fixed rule from PID-3.4. Location type translations come from the [local registry](registry.html).
 
 Messages are processed one at a time, so MLLP and HTTP input can't race on the same appointment.
 

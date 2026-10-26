@@ -13,7 +13,7 @@
 | # | Item |
 |---|---|
 | 1 | Canonical URLs of AU Core Practitioner, PractitionerRole, Location and Organization (the AU Core Patient canonical was confirmed; the others follow the same pattern) |
-| 2 | HPI-O identifier system and type coding (so the sample registry doesn't send an HPI-O) |
+| 2 | HPI-O identifier system and type coding (so the seed Organization doesn't carry an HPI-O) |
 | 3 | Code values: Australian States and Territories, Australian Indigenous Status, location-physical-type (`bd`, `ro`, `wa`), and any location type codes you add to the registry |
 | 4 | That `urn:ietf:bcp:47` codes satisfy the Common Languages in Australia binding |
 {:.grid}

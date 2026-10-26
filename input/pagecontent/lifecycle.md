@@ -15,10 +15,10 @@ AIP|1|A|8003619900004562^SMITH^JANE^^^DR^^^AUSHIC^^^^NPI|ATND^Attending^LOCAL
 ```
 
 Creates:
-* [Patient 900001](Patient-patient-900001.html): MRN with assigner, IHI, Medicare number, Indigenous status (PID-10 `4`), language (PID-15 `en`)
+* [Patient 900001](Patient-patient-900001.html): MRN (system `http://example.org/fhir/sid/mrn/SIMHOSP`), IHI, Medicare number, Indigenous status (PID-10 `4`), language (PID-15 `en`)
 * [Practitioner Dr Jane SMITH](Practitioner-practitioner-8003619900004562.html), identified by HPI-I (XCN.13 `NPI`)
-* [Organization Simulated Hospital](Organization-organization-simhosp.html), from facility `SIMHOSP` and the [local registry](registry.html)
-* [Location Outpatient Clinic 1](Location-location-simhosp-opd-clinic1.html): physical type `ro` (room), managed by that Organization
+* Uses [Organization Simulated Hospital](Organization-organization-simhosp.html), which was loaded onto the server beforehand (`seed/organizations.json`) and is matched on facility `SIMHOSP`
+* [Location Outpatient Clinic 1](Location-location-simhosp-opd-clinic1.html): physical type `ro` (room), managed by that Organization, with its address copied from it
 * [Appointment FIL2001 (after S12)](Appointment-appointment-fil2001-after-s12.html): `booked`, 14 Oct 2026 09:30–10:00 +10:00
 
 ### Step 2 – S13 reschedule
@@ -77,6 +77,7 @@ AIL|1|A|OPD^PHYSIO1^^SIMHOSP^^^^^Physio Room 1
 ```
 
 [Appointment FIL2002](Appointment-appointment-fil2002.html) takes its times from AIS-4 + AIS-7/8, in the default time zone (Australia/Brisbane) because AIS-4 has no offset.
+Facility `SATELLITE` isn't on the server, so the service created placeholder [Organization SATELLITE](Organization-organization-satellite.html) (tagged `placeholder`) for [Location Physio Room 1](Location-location-satellite-opd-physio1.html), which therefore has no address.
 [Patient 900002](Patient-patient-900002.html) has no Indigenous status or language because PID-10 and PID-15 are empty.
 
 ### Missing data

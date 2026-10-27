@@ -245,6 +245,7 @@ The adapter SHALL NOT update an existing Organization. Teams that create placeho
  "identifier": [{"system": "http://example.org/fhir/sid/organization", "value": "<AIL-3.4>"}],
  "name": "<AIL-3.4>", "active": true}
 ```
+The FHIR server includes a set of preloaded organizations with facility codes set in the identifier list.   The list of facility codes and Organization names and id's can be found here:  [Facility Codes](facility-codes.html).
 
 It is created with `POST Organization` and `If-None-Exist: identifier=http://example.org/fhir/sid/organization|<AIL-3.4>`, so it can never be duplicated. A Location under a placeholder has no address.
 

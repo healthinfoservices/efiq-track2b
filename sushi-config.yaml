@@ -48,6 +48,8 @@ pages:
     title: Building This Guide
   open-issues.md:
     title: Open Issues
+  facility-codes.md:
+    title: Facility Codes
 
 menu:
   Home: index.html

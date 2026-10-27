@@ -4,8 +4,8 @@ This implementation guide documents a **proof of concept** that turns an HL7 v2 
 A Python ingestion service receives SIU S12, S13, S14 and S15 messages, converts them, and writes them to a HAPI FHIR server.
 A web front end (planned: Vue/Vuetify) reads appointments directly from that server.
 
-<div class="dragon">
-This guide describes a proof of concept that uses <b>simulated data only</b>. It is not intended for clinical use, and has not been balloted or reviewed.
+<div>
+This guide describes a proof of concept that uses <b>simulated data only</b>. It is not intended for clinical use.
 IHI, HPI-I and Medicare numbers in the examples are <b>synthetic</b>: they pass the AU Base format checks but were not issued to anyone.
 The canonical URL, local identifier systems and local code systems are <code>example.org</code> placeholders.
 </div>

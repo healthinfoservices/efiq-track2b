@@ -1,0 +1,62 @@
+# example.fhir.siu2fhir.au#0.1.0: HL7 v2 SIU to FHIR Appointment - AU Core (Proof of Concept)
+
+## Pages
+
+* [Home](index.md)
+* [Architecture](architecture.md)
+* [Message Processing and Acknowledgements](messaging.md)
+* [Artifacts Summary](artifacts.md)
+* [Worked Example](lifecycle.md)
+* [AU Core Conformance](au-core.md)
+* [HL7 v2 to FHIR Mapping](mapping.md)
+* [Adapter Specification](adapter-specification.md)
+* [Local Registry](registry.md)
+* [Building This Guide](building.md)
+* [Facility Codes](facility-codes.md)
+* [Open Issues](open-issues.md)
+
+## Resources
+
+### CodeSystems
+
+* [SIU2FHIR Resource Tags](CodeSystem-siu2fhir-tag.md)
+
+### ValueSets
+
+* [Appointment Identifier Type](ValueSet-appointment-identifier-type.md)
+
+### Resource Profiles
+
+* [SIU AU Appointment](StructureDefinition-siu-au-appointment.md)
+
+### Extensions
+
+* [Source Message Control ID](StructureDefinition-source-message-control-id.md)
+* [Source Message Date/Time](StructureDefinition-source-message-datetime.md)
+
+### ConceptMaps
+
+* [HL7 v2 Administrative Sex (0001) to FHIR AdministrativeGender](ConceptMap-HL70001ToAdministrativeGender.md)
+* [HL7 v2 Filler Status (0278) to FHIR AppointmentStatus](ConceptMap-HL70278ToAppointmentStatus.md)
+
+### ImplementationGuides
+
+* [HL7 v2 SIU to FHIR Appointment - AU Core (Proof of Concept)](index.md)
+
+### Examples
+
+* [appointment-fil2001-after-s12 (Appointment)](Appointment-appointment-fil2001-after-s12.md)
+* [appointment-fil2001-after-s13 (Appointment)](Appointment-appointment-fil2001-after-s13.md)
+* [appointment-fil2001-after-s14 (Appointment)](Appointment-appointment-fil2001-after-s14.md)
+* [appointment-fil2001-after-s15 (Appointment)](Appointment-appointment-fil2001-after-s15.md)
+* [appointment-fil2002 (Appointment)](Appointment-appointment-fil2002.md)
+* [appointment-fil2003 (Appointment)](Appointment-appointment-fil2003.md)
+* [Physio Room 1 (Location)](Location-location-satellite-opd-physio1.md)
+* [Outpatient Clinic 1 (Location)](Location-location-simhosp-opd-clinic1.md)
+* [SATELLITE (Organization)](Organization-organization-satellite.md)
+* [Simulated Hospital (Organization)](Organization-organization-simhosp.md)
+* [patient-900001 (Patient)](Patient-patient-900001.md)
+* [patient-900002 (Patient)](Patient-patient-900002.md)
+* [patient-900003 (Patient)](Patient-patient-900003.md)
+* [practitioner-2426621b (Practitioner)](Practitioner-practitioner-2426621b.md)
+* [practitioner-8003619900004562 (Practitioner)](Practitioner-practitioner-8003619900004562.md)

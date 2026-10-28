@@ -1,0 +1,119 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://example.org/fhir/siu2fhir-au/Appointment/appointment-fil2001-after-s12> a fhir:Appointment ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "appointment-fil2001-after-s12"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://example.org/fhir/siu2fhir-au/StructureDefinition/siu-au-appointment" ;
+       fhir:index 0 ;
+       fhir:link <http://example.org/fhir/siu2fhir-au/StructureDefinition/siu-au-appointment>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Appointment appointment-fil2001-after-s12</b></p><a name=\"appointment-fil2001-after-s12\"> </a><a name=\"hcappointment-fil2001-after-s12\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-siu-au-appointment.html\">SIU AU Appointment</a></p></div><p><b>Source Message Date/Time</b>: 2026-10-07 09:00:00+1000</p><p><b>Source Message Control ID</b>: MSG0001</p><p><b>identifier</b>: Filler Identifier/FIL2001, Placer Identifier/PLC1001</p><p><b>status</b>: Booked</p><p><b>serviceType</b>: <span title=\"Codes:{http://example.org/fhir/CodeSystem/v2-local/LOCAL GPCONS}\">General consultation</span></p><p><b>appointmentType</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0276 FOLLOWUP}\">Follow-up</span></p><p><b>start</b>: 2026-10-14 09:30:00+1000</p><p><b>end</b>: 2026-10-14 10:00:00+1000</p><p><b>minutesDuration</b>: 30</p><blockquote><p><b>participant</b></p><p><b>actor</b>: <a href=\"Patient-patient-900001.html\">ALICE TESTPATIENT</a></p><p><b>required</b>: Required</p><p><b>status</b>: Accepted</p></blockquote><blockquote><p><b>participant</b></p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ParticipationType ATND}\">Attending</span></p><p><b>actor</b>: <a href=\"Practitioner-practitioner-8003619900004562.html\">DR JANE SMITH</a></p><p><b>status</b>: Accepted</p></blockquote><blockquote><p><b>participant</b></p><p><b>actor</b>: <a href=\"Location-location-simhosp-opd-clinic1.html\">Outpatient Clinic 1</a></p><p><b>status</b>: Accepted</p></blockquote></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index 0 ;
+     fhir:Extension.url [ fhir:value "http://example.org/fhir/siu2fhir-au/StructureDefinition/source-message-datetime" ] ;
+     fhir:Extension.valueDateTime [ fhir:value "2026-10-07T09:00:00+10:00"^^xsd:dateTime ]
+  ], [
+     fhir:index 1 ;
+     fhir:Extension.url [ fhir:value "http://example.org/fhir/siu2fhir-au/StructureDefinition/source-message-control-id" ] ;
+     fhir:Extension.valueString [ fhir:value "MSG0001" ]
+  ] ;
+  fhir:Appointment.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+         fhir:Coding.code [ fhir:value "FILL" ]
+       ]
+     ] ;
+     fhir:Identifier.system [ fhir:value "http://example.org/fhir/sid/appointment/filler/SCHED" ] ;
+     fhir:Identifier.value [ fhir:value "FIL2001" ]
+  ], [
+     fhir:index 1 ;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+         fhir:Coding.code [ fhir:value "PLAC" ]
+       ]
+     ] ;
+     fhir:Identifier.system [ fhir:value "http://example.org/fhir/sid/appointment/placer/PAS" ] ;
+     fhir:Identifier.value [ fhir:value "PLC1001" ]
+  ] ;
+  fhir:Appointment.status [ fhir:value "booked"] ;
+  fhir:Appointment.serviceType [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://example.org/fhir/CodeSystem/v2-local/LOCAL" ] ;
+       fhir:Coding.code [ fhir:value "GPCONS" ] ;
+       fhir:Coding.display [ fhir:value "General consultation" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "General consultation" ]
+  ] ;
+  fhir:Appointment.appointmentType [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0276" ] ;
+       fhir:Coding.code [ fhir:value "FOLLOWUP" ] ;
+       fhir:Coding.display [ fhir:value "Follow-up" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "Follow-up" ]
+  ] ;
+  fhir:Appointment.start [ fhir:value "2026-10-14T09:30:00+10:00"^^xsd:dateTime] ;
+  fhir:Appointment.end [ fhir:value "2026-10-14T10:00:00+10:00"^^xsd:dateTime] ;
+  fhir:Appointment.minutesDuration [ fhir:value "30"^^xsd:positiveInteger] ;
+  fhir:Appointment.participant [
+     fhir:index 0 ;
+     fhir:Appointment.participant.actor [
+       fhir:link <http://example.org/fhir/siu2fhir-au/Patient/patient-900001> ;
+       fhir:Reference.reference [ fhir:value "Patient/patient-900001" ] ;
+       fhir:Reference.display [ fhir:value "ALICE TESTPATIENT" ]
+     ] ;
+     fhir:Appointment.participant.required [ fhir:value "required" ] ;
+     fhir:Appointment.participant.status [ fhir:value "accepted" ]
+  ], [
+     fhir:index 1 ;
+     fhir:Appointment.participant.type [
+       fhir:index 0 ;
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ParticipationType" ] ;
+         fhir:Coding.code [ fhir:value "ATND" ]
+       ] ;
+       fhir:CodeableConcept.text [ fhir:value "Attending" ]
+     ] ;
+     fhir:Appointment.participant.actor [
+       fhir:link <http://example.org/fhir/siu2fhir-au/Practitioner/practitioner-8003619900004562> ;
+       fhir:Reference.reference [ fhir:value "Practitioner/practitioner-8003619900004562" ] ;
+       fhir:Reference.display [ fhir:value "DR JANE SMITH" ]
+     ] ;
+     fhir:Appointment.participant.status [ fhir:value "accepted" ]
+  ], [
+     fhir:index 2 ;
+     fhir:Appointment.participant.actor [
+       fhir:link <http://example.org/fhir/siu2fhir-au/Location/location-simhosp-opd-clinic1> ;
+       fhir:Reference.reference [ fhir:value "Location/location-simhosp-opd-clinic1" ] ;
+       fhir:Reference.display [ fhir:value "Outpatient Clinic 1" ]
+     ] ;
+     fhir:Appointment.participant.status [ fhir:value "accepted" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://example.org/fhir/siu2fhir-au/Appointment/appointment-fil2001-after-s12.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

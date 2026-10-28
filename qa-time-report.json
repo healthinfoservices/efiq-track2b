@@ -1,0 +1,1012 @@
+{
+  "date" : "Wed, 28 Oct, 2026 20:03:31 +0000",
+  "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
+  "files" : [{
+    "name" : "/fsh-generated/resources/ImplementationGuide-example.fhir.siu2fhir.au.json",
+    "size" : 10429,
+    "processes" : [{
+      "activity" : "load",
+      "start" : 461,
+      "length" : 12
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 461,
+      "length" : 8
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 461,
+      "length" : 197
+    },
+    {
+      "activity" : "validate",
+      "start" : 464,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 464,
+      "length" : 295222
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 760,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 761,
+      "length" : 87
+    },
+    {
+      "activity" : "generate2",
+      "start" : 763,
+      "length" : 64
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 776,
+      "length" : 4
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Appointment-appointment-fil2001-after-s12.json",
+    "size" : 2519,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 460,
+      "length" : 12
+    },
+    {
+      "activity" : "load-configure",
+      "start" : 461,
+      "length" : 3
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 461,
+      "length" : 61
+    },
+    {
+      "activity" : "validate",
+      "start" : 760,
+      "length" : 244
+    },
+    {
+      "activity" : "generate1",
+      "start" : 761,
+      "length" : 12
+    },
+    {
+      "activity" : "generate2",
+      "start" : 763,
+      "length" : 18
+    },
+    {
+      "activity" : "generateExampleZip",
+      "start" : 776,
+      "length" : 3
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Appointment-appointment-fil2001-after-s13.json",
+    "size" : 2519,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 460,
+      "length" : 8
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 461,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 462,
+      "length" : 4
+    },
+    {
+      "activity" : "validate",
+      "start" : 759,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 760,
+      "length" : 14
+    },
+    {
+      "activity" : "generate1",
+      "start" : 761,
+      "length" : 11
+    },
+    {
+      "activity" : "generate2",
+      "start" : 763,
+      "length" : 9
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Appointment-appointment-fil2001-after-s14.json",
+    "size" : 2558,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 460,
+      "length" : 5
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 462,
+      "length" : 4
+    },
+    {
+      "activity" : "validate",
+      "start" : 760,
+      "length" : 13
+    },
+    {
+      "activity" : "generate1",
+      "start" : 761,
+      "length" : 11
+    },
+    {
+      "activity" : "generate2",
+      "start" : 763,
+      "length" : 10
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Appointment-appointment-fil2001-after-s15.json",
+    "size" : 2751,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 460,
+      "length" : 6
+    },
+    {
+      "activity" : "scan",
+      "start" : 461,
+      "length" : 1
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 461,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 462,
+      "length" : 5
+    },
+    {
+      "activity" : "validate",
+      "start" : 760,
+      "length" : 13
+    },
+    {
+      "activity" : "generate1",
+      "start" : 761,
+      "length" : 11
+    },
+    {
+      "activity" : "generate2",
+      "start" : 763,
+      "length" : 10
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Appointment-appointment-fil2002.json",
+    "size" : 2063,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 460,
+      "length" : 6
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 461,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 462,
+      "length" : 3
+    },
+    {
+      "activity" : "validate",
+      "start" : 760,
+      "length" : 13
+    },
+    {
+      "activity" : "generate1",
+      "start" : 761,
+      "length" : 8
+    },
+    {
+      "activity" : "generate2",
+      "start" : 763,
+      "length" : 8
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Appointment-appointment-fil2003.json",
+    "size" : 2037,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 460,
+      "length" : 5
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 461,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 462,
+      "length" : 3
+    },
+    {
+      "activity" : "validate",
+      "start" : 760,
+      "length" : 12
+    },
+    {
+      "activity" : "generate1",
+      "start" : 761,
+      "length" : 9
+    },
+    {
+      "activity" : "generate2",
+      "start" : 763,
+      "length" : 7
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/CodeSystem-siu2fhir-tag.json",
+    "size" : 696,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 460,
+      "length" : 4
+    },
+    {
+      "activity" : "load",
+      "start" : 460,
+      "length" : 11
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 461,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 462,
+      "length" : 7
+    },
+    {
+      "activity" : "validate",
+      "start" : 463,
+      "length" : 261
+    },
+    {
+      "activity" : "checkConformanceResources",
+      "start" : 759,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 761,
+      "length" : 7
+    },
+    {
+      "activity" : "generate2",
+      "start" : 763,
+      "length" : 81
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ConceptMap-HL70001ToAdministrativeGender.json",
+    "size" : 1814,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 460,
+      "length" : 2
+    },
+    {
+      "activity" : "load",
+      "start" : 460,
+      "length" : 7
+    },
+    {
+      "activity" : "load",
+      "start" : 461,
+      "length" : 4
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 462,
+      "length" : 10
+    },
+    {
+      "activity" : "validate",
+      "start" : 464,
+      "length" : 66
+    },
+    {
+      "activity" : "generate1",
+      "start" : 761,
+      "length" : 10
+    },
+    {
+      "activity" : "generate2",
+      "start" : 763,
+      "length" : 56
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 776,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ConceptMap-HL70278ToAppointmentStatus.json",
+    "size" : 3254,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 460,
+      "length" : 3
+    },
+    {
+      "activity" : "load",
+      "start" : 460,
+      "length" : 10
+    },
+    {
+      "activity" : "load",
+      "start" : 461,
+      "length" : 4
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 461,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 462,
+      "length" : 11
+    },
+    {
+      "activity" : "validate",
+      "start" : 464,
+      "length" : 30
+    },
+    {
+      "activity" : "generate1",
+      "start" : 761,
+      "length" : 14
+    },
+    {
+      "activity" : "generate2",
+      "start" : 763,
+      "length" : 67
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Location-location-satellite-opd-physio1.json",
+    "size" : 676,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 460,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 462,
+      "length" : 462
+    },
+    {
+      "activity" : "validate",
+      "start" : 760,
+      "length" : 9
+    },
+    {
+      "activity" : "generate1",
+      "start" : 761,
+      "length" : 6
+    },
+    {
+      "activity" : "generate2",
+      "start" : 763,
+      "length" : 9
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Location-location-simhosp-opd-clinic1.json",
+    "size" : 1162,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 460,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 462,
+      "length" : 2
+    },
+    {
+      "activity" : "validate",
+      "start" : 760,
+      "length" : 133
+    },
+    {
+      "activity" : "generate1",
+      "start" : 761,
+      "length" : 7
+    },
+    {
+      "activity" : "generate2",
+      "start" : 763,
+      "length" : 9
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Organization-organization-satellite.json",
+    "size" : 577,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 460,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 462,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 760,
+      "length" : 14
+    },
+    {
+      "activity" : "generate1",
+      "start" : 761,
+      "length" : 6
+    },
+    {
+      "activity" : "generate2",
+      "start" : 763,
+      "length" : 6
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Organization-organization-simhosp.json",
+    "size" : 745,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 460,
+      "length" : 1
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 461,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 462,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 760,
+      "length" : 12
+    },
+    {
+      "activity" : "generate1",
+      "start" : 761,
+      "length" : 5
+    },
+    {
+      "activity" : "generate2",
+      "start" : 763,
+      "length" : 6
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Patient-patient-900001.json",
+    "size" : 2269,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 460,
+      "length" : 5
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 462,
+      "length" : 315
+    },
+    {
+      "activity" : "validate",
+      "start" : 760,
+      "length" : 371
+    },
+    {
+      "activity" : "generate1",
+      "start" : 761,
+      "length" : 11
+    },
+    {
+      "activity" : "generate2",
+      "start" : 763,
+      "length" : 14
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Patient-patient-900002.json",
+    "size" : 712,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 460,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 462,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 760,
+      "length" : 12
+    },
+    {
+      "activity" : "generate1",
+      "start" : 761,
+      "length" : 5
+    },
+    {
+      "activity" : "generate2",
+      "start" : 763,
+      "length" : 4
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 856,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Patient-patient-900003.json",
+    "size" : 929,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 460,
+      "length" : 1
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 461,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 462,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 760,
+      "length" : 19
+    },
+    {
+      "activity" : "generate1",
+      "start" : 761,
+      "length" : 7
+    },
+    {
+      "activity" : "generate2",
+      "start" : 763,
+      "length" : 5
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Practitioner-practitioner-2426621b.json",
+    "size" : 716,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 460,
+      "length" : 5
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 462,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 760,
+      "length" : 13
+    },
+    {
+      "activity" : "generate1",
+      "start" : 761,
+      "length" : 6
+    },
+    {
+      "activity" : "generate2",
+      "start" : 763,
+      "length" : 6
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Practitioner-practitioner-8003619900004562.json",
+    "size" : 698,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 460,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 462,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 760,
+      "length" : 13
+    },
+    {
+      "activity" : "generate1",
+      "start" : 761,
+      "length" : 5
+    },
+    {
+      "activity" : "generate2",
+      "start" : 763,
+      "length" : 4
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-siu-au-appointment.json",
+    "size" : 6296,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 460,
+      "length" : 6
+    },
+    {
+      "activity" : "load",
+      "start" : 461,
+      "length" : 20
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 461,
+      "length" : 82
+    },
+    {
+      "activity" : "load-configure",
+      "start" : 461,
+      "length" : 1
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 461,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 462,
+      "length" : 819
+    },
+    {
+      "activity" : "validate",
+      "start" : 463,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 464,
+      "length" : 546
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 760,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 761,
+      "length" : 211
+    },
+    {
+      "activity" : "generate2",
+      "start" : 763,
+      "length" : 1080
+    },
+    {
+      "activity" : "generate2",
+      "start" : 765,
+      "length" : 1962
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 776,
+      "length" : 11
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-source-message-control-id.json",
+    "size" : 1591,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 460,
+      "length" : 5
+    },
+    {
+      "activity" : "load",
+      "start" : 461,
+      "length" : 4
+    },
+    {
+      "activity" : "load",
+      "start" : 461,
+      "length" : 1
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 461,
+      "length" : 15
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 463,
+      "length" : 10
+    },
+    {
+      "activity" : "validate",
+      "start" : 464,
+      "length" : 44
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 760,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 761,
+      "length" : 37
+    },
+    {
+      "activity" : "generate2",
+      "start" : 764,
+      "length" : 147
+    },
+    {
+      "activity" : "generate2",
+      "start" : 766,
+      "length" : 57
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 776,
+      "length" : 2
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-source-message-datetime.json",
+    "size" : 1778,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 460,
+      "length" : 5
+    },
+    {
+      "activity" : "load",
+      "start" : 461,
+      "length" : 3
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 461,
+      "length" : 10
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 463,
+      "length" : 7
+    },
+    {
+      "activity" : "validate",
+      "start" : 464,
+      "length" : 39
+    },
+    {
+      "activity" : "generate1",
+      "start" : 761,
+      "length" : 35
+    },
+    {
+      "activity" : "generate2",
+      "start" : 764,
+      "length" : 111
+    },
+    {
+      "activity" : "generate2",
+      "start" : 767,
+      "length" : 49
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 776,
+      "length" : 2
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ValueSet-appointment-identifier-type.json",
+    "size" : 657,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 460,
+      "length" : 1
+    },
+    {
+      "activity" : "load",
+      "start" : 460,
+      "length" : 45
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 463,
+      "length" : 64
+    },
+    {
+      "activity" : "validate",
+      "start" : 463,
+      "length" : 47
+    },
+    {
+      "activity" : "generate1",
+      "start" : 761,
+      "length" : 7
+    },
+    {
+      "activity" : "generate2",
+      "start" : 764,
+      "length" : 85
+    }]
+  },
+  {
+    "name" : "/fsh-generated/includes/fsh-link-references.md",
+    "size" : 1489
+  },
+  {
+    "name" : "/fsh-generated/includes/menu.xml",
+    "size" : 1900
+  },
+  {
+    "name" : "/input/pagecontent/messaging.md",
+    "size" : 2545,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 765,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/facility-codes.md",
+    "size" : 25534,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 464,
+      "length" : 1
+    },
+    {
+      "activity" : "generate2",
+      "start" : 765,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/mapping.md",
+    "size" : 7970,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 765,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/building.md",
+    "size" : 1454
+  },
+  {
+    "name" : "/input/pagecontent/lifecycle.md",
+    "size" : 6611
+  },
+  {
+    "name" : "/input/pagecontent/registry.md",
+    "size" : 1099
+  },
+  {
+    "name" : "/input/pagecontent/architecture.md",
+    "size" : 2526,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 765,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/adapter-specification.md",
+    "size" : 36895,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 765,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/index.md",
+    "size" : 2693,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 765,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/au-core.md",
+    "size" : 3173
+  },
+  {
+    "name" : "/input/pagecontent/open-issues.md",
+    "size" : 1697
+  },
+  {
+    "name" : "/template/config",
+    "size" : 0
+  },
+  {
+    "name" : "/template/config/_config.yml",
+    "size" : 140
+  },
+  {
+    "name" : "/input/images",
+    "size" : 0,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 765,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/images/track2b-architecture.svg",
+    "size" : 5662
+  },
+  {
+    "name" : "/input/images/track2b-architecture.png",
+    "size" : 157956,
+    "processes" : [{
+      "activity" : "scanProfilesForR5",
+      "start" : 856,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/temp/pages/_includes/artifacts.xml",
+    "size" : 12236,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 765,
+      "length" : 1
+    }]
+  }]
+}

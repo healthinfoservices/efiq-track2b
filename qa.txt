@@ -1,0 +1,193 @@
+SIU2FHIRAUCore : Validation Results
+=========================================
+
+err = 20, warn = 47, info = 22, broken links = 0
+IG Publisher Version: 3.0.1
+Generated Wed Oct 28 20:17:48 UTC 2026. FHIR version 4.0.1 for example.fhir.siu2fhir.au#0.1.0 (canonical = http://example.org/fhir/siu2fhir-au)
+ Build Errors : 13 / 11 / 0
+ /home/runner/work/efiq-track2b/efiq-track2b/fsh-generated/resources/Appointment-appointment-fil2001-after-s12 : 1 / 1 / 2
+ /home/runner/work/efiq-track2b/efiq-track2b/fsh-generated/resources/Appointment-appointment-fil2001-after-s13 : 1 / 1 / 2
+ /home/runner/work/efiq-track2b/efiq-track2b/fsh-generated/resources/Appointment-appointment-fil2001-after-s14 : 1 / 1 / 2
+ /home/runner/work/efiq-track2b/efiq-track2b/fsh-generated/resources/Appointment-appointment-fil2001-after-s15 : 1 / 2 / 2
+ /home/runner/work/efiq-track2b/efiq-track2b/fsh-generated/resources/Appointment-appointment-fil2002 : 1 / 1 / 2
+ /home/runner/work/efiq-track2b/efiq-track2b/fsh-generated/resources/Appointment-appointment-fil2003 : 0 / 1 / 1
+ /home/runner/work/efiq-track2b/efiq-track2b/fsh-generated/resources/CodeSystem-siu2fhir-tag : 0 / 1 / 1
+ /home/runner/work/efiq-track2b/efiq-track2b/fsh-generated/resources/ConceptMap-HL70001ToAdministrativeGender : 0 / 1 / 2
+ /home/runner/work/efiq-track2b/efiq-track2b/fsh-generated/resources/ConceptMap-HL70278ToAppointmentStatus : 1 / 4 / 2
+ /home/runner/work/efiq-track2b/efiq-track2b/fsh-generated/resources/ImplementationGuide-example.fhir.siu2fhir.au : 0 / 0 / 2
+ /home/runner/work/efiq-track2b/efiq-track2b/fsh-generated/resources/Location-location-satellite-opd-physio1 : 0 / 0 / 1
+ /home/runner/work/efiq-track2b/efiq-track2b/fsh-generated/resources/Location-location-simhosp-opd-clinic1 : 0 / 3 / 1
+ /home/runner/work/efiq-track2b/efiq-track2b/fsh-generated/resources/Organization-organization-satellite : 1 / 0 / 3
+ /home/runner/work/efiq-track2b/efiq-track2b/fsh-generated/resources/Organization-organization-simhosp : 0 / 2 / 2
+ /home/runner/work/efiq-track2b/efiq-track2b/fsh-generated/resources/Patient-patient-900001 : 0 / 9 / 3
+ /home/runner/work/efiq-track2b/efiq-track2b/fsh-generated/resources/Patient-patient-900002 : 0 / 0 / 2
+ /home/runner/work/efiq-track2b/efiq-track2b/fsh-generated/resources/Patient-patient-900003 : 0 / 0 / 3
+ /home/runner/work/efiq-track2b/efiq-track2b/fsh-generated/resources/Practitioner-practitioner-2426621b : 0 / 1 / 2
+ /home/runner/work/efiq-track2b/efiq-track2b/fsh-generated/resources/Practitioner-practitioner-8003619900004562 : 0 / 4 / 1
+ /home/runner/work/efiq-track2b/efiq-track2b/fsh-generated/resources/StructureDefinition-siu-au-appointment : 0 / 3 / 3
+ /home/runner/work/efiq-track2b/efiq-track2b/fsh-generated/resources/StructureDefinition-source-message-control-id : 0 / 0 / 2
+ /home/runner/work/efiq-track2b/efiq-track2b/fsh-generated/resources/StructureDefinition-source-message-datetime : 0 / 0 / 2
+ /home/runner/work/efiq-track2b/efiq-track2b/fsh-generated/resources/ValueSet-appointment-identifier-type : 0 / 1 / 2
+</table>
+
+== n/a ==
+ERROR: ImplementationGuide.definition.parameter[23].value: Supressed messages file not found
+ERROR: /home/runner/work/efiq-track2b/efiq-track2b/output/adapter-specification.html: The heading <h1> 'Track 2B: SIU to FHIR Appointment Adapter Specification' (id=track-2b-siu-to-fhir-appointment-adapter-specification) is at a higher level than the first heading on the page (<h2> 'Adapter Specification'). The first heading on a page must be its top level heading (WCAG compliance test)
+ERROR: /home/runner/work/efiq-track2b/efiq-track2b/output/adapter-specification.html: The page has more than one top level heading: <h2> '1. Purpose and scope' (id=1-purpose-and-scope) is at the same level as the first heading on the page (<h2> 'Adapter Specification'). A page must have exactly one top level heading, with every other heading beneath it (WCAG compliance test)
+ERROR: /home/runner/work/efiq-track2b/efiq-track2b/output/adapter-specification.html: The page has more than one top level heading: <h2> '2. Assumptions and preconditions' (id=2-assumptions-and-preconditions) is at the same level as the first heading on the page (<h2> 'Adapter Specification'). A page must have exactly one top level heading, with every other heading beneath it (WCAG compliance test)
+ERROR: /home/runner/work/efiq-track2b/efiq-track2b/output/adapter-specification.html: The page has more than one top level heading: <h2> '3. Architecture overview' (id=3-architecture-overview) is at the same level as the first heading on the page (<h2> 'Adapter Specification'). A page must have exactly one top level heading, with every other heading beneath it (WCAG compliance test)
+ERROR: /home/runner/work/efiq-track2b/efiq-track2b/output/adapter-specification.html: The page has more than one top level heading: <h2> '4. Functional requirements' (id=4-functional-requirements) is at the same level as the first heading on the page (<h2> 'Adapter Specification'). A page must have exactly one top level heading, with every other heading beneath it (WCAG compliance test)
+ERROR: /home/runner/work/efiq-track2b/efiq-track2b/output/adapter-specification.html: The page has more than one top level heading: <h2> '5. Interfaces' (id=5-interfaces) is at the same level as the first heading on the page (<h2> 'Adapter Specification'). A page must have exactly one top level heading, with every other heading beneath it (WCAG compliance test)
+ERROR: /home/runner/work/efiq-track2b/efiq-track2b/output/adapter-specification.html: The page has more than one top level heading: <h2> '6. Detailed mapping' (id=6-detailed-mapping) is at the same level as the first heading on the page (<h2> 'Adapter Specification'). A page must have exactly one top level heading, with every other heading beneath it (WCAG compliance test)
+ERROR: /home/runner/work/efiq-track2b/efiq-track2b/output/adapter-specification.html: The page has more than one top level heading: <h2> '7. Code set mappings' (id=7-code-set-mappings) is at the same level as the first heading on the page (<h2> 'Adapter Specification'). A page must have exactly one top level heading, with every other heading beneath it (WCAG compliance test)
+ERROR: /home/runner/work/efiq-track2b/efiq-track2b/output/adapter-specification.html: The page has more than one top level heading: <h2> '8. Error handling and acknowledgement codes' (id=8-error-handling-and-acknowledgement-codes) is at the same level as the first heading on the page (<h2> 'Adapter Specification'). A page must have exactly one top level heading, with every other heading beneath it (WCAG compliance test)
+ERROR: /home/runner/work/efiq-track2b/efiq-track2b/output/adapter-specification.html: The page has more than one top level heading: <h2> '9. Test scenarios and conformance checklist' (id=9-test-scenarios-and-conformance-checklist) is at the same level as the first heading on the page (<h2> 'Adapter Specification'). A page must have exactly one top level heading, with every other heading beneath it (WCAG compliance test)
+ERROR: /home/runner/work/efiq-track2b/efiq-track2b/output/adapter-specification.html: The page has more than one top level heading: <h2> '10. Open questions and references' (id=10-open-questions-and-references) is at the same level as the first heading on the page (<h2> 'Adapter Specification'). A page must have exactly one top level heading, with every other heading beneath it (WCAG compliance test)
+ERROR: /home/runner/work/efiq-track2b/efiq-track2b/output/facility-codes.html: The heading <h1> 'Facility Codes' (id=facility-codes) is at a higher level than the first heading on the page (<h2> 'Facility Codes'). The first heading on a page must be its top level heading (WCAG compliance test)
+WARNING: /home/runner/work/efiq-track2b/efiq-track2b/output/searchform.html: The html source is not well formed: Found "</a>" expecting "</img>" at line 34 column 177
+WARNING: /home/runner/work/efiq-track2b/efiq-track2b/output/searchform.html: The html source is not well formed: Found "</div>" expecting "</body>" at line 79 column 10
+WARNING: /home/runner/work/efiq-track2b/efiq-track2b/output/searchform.html: The html source is not well formed: Found "</div>" expecting "</body>" at line 80 column 9
+WARNING: /home/runner/work/efiq-track2b/efiq-track2b/output/searchform.html: The html source is not well formed: Found "</div>" expecting "</body>" at line 109 column 8
+WARNING: /home/runner/work/efiq-track2b/efiq-track2b/output/searchform.html: The html source is not well formed: Found "</div>" expecting "</body>" at line 111 column 12
+WARNING: /home/runner/work/efiq-track2b/efiq-track2b/output/searchform.html: The html source is not well formed: Found "</div>" expecting "</body>" at line 112 column 20
+WARNING: /home/runner/work/efiq-track2b/efiq-track2b/output/searchform.html: The html source is not well formed: Found "</div>" expecting "</body>" at line 113 column 16
+WARNING: /home/runner/work/efiq-track2b/efiq-track2b/output/searchform.html: The html source is not well formed: Found "</div>" expecting "</body>" at line 115 column 12
+WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
+WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
+
+
+== fsh-generated/resources/Appointment-appointment-fil2001-after-s12.json ==
+WARNING: Appointment/appointment-fil2001-after-s12: Appointment.serviceType[0].coding[0].system: A definition for CodeSystem 'http://example.org/fhir/CodeSystem/v2-local/LOCAL' could not be found, so the code cannot be validated
+ERROR: Appointment/appointment-fil2001-after-s12: Appointment.appointmentType.coding[0].display: Wrong Display Name 'Follow-up' for http://terminology.hl7.org/CodeSystem/v2-0276#FOLLOWUP. Valid display is 'A follow up visit from a previous appointment' (for the language(s) 'en-AU')
+INFORMATION: Appointment/appointment-fil2001-after-s12: Appointment.appointmentType: None of the codings provided are in the value set 'hl7VS-appointmentReasonCodes' (http://terminology.hl7.org/ValueSet/v2-0276|3.0.0), and a coding is recommended to come from this value set (codes = http://terminology.hl7.org/CodeSystem/v2-0276#FOLLOWUP)
+
+
+== fsh-generated/resources/Appointment-appointment-fil2001-after-s13.json ==
+WARNING: Appointment/appointment-fil2001-after-s13: Appointment.serviceType[0].coding[0].system: A definition for CodeSystem 'http://example.org/fhir/CodeSystem/v2-local/LOCAL' could not be found, so the code cannot be validated
+ERROR: Appointment/appointment-fil2001-after-s13: Appointment.appointmentType.coding[0].display: Wrong Display Name 'Follow-up' for http://terminology.hl7.org/CodeSystem/v2-0276#FOLLOWUP. Valid display is 'A follow up visit from a previous appointment' (for the language(s) 'en-AU')
+INFORMATION: Appointment/appointment-fil2001-after-s13: Appointment.appointmentType: None of the codings provided are in the value set 'hl7VS-appointmentReasonCodes' (http://terminology.hl7.org/ValueSet/v2-0276|3.0.0), and a coding is recommended to come from this value set (codes = http://terminology.hl7.org/CodeSystem/v2-0276#FOLLOWUP)
+
+
+== fsh-generated/resources/Appointment-appointment-fil2001-after-s14.json ==
+WARNING: Appointment/appointment-fil2001-after-s14: Appointment.serviceType[0].coding[0].system: A definition for CodeSystem 'http://example.org/fhir/CodeSystem/v2-local/LOCAL' could not be found, so the code cannot be validated
+ERROR: Appointment/appointment-fil2001-after-s14: Appointment.appointmentType.coding[0].display: Wrong Display Name 'Follow-up' for http://terminology.hl7.org/CodeSystem/v2-0276#FOLLOWUP. Valid display is 'A follow up visit from a previous appointment' (for the language(s) 'en-AU')
+INFORMATION: Appointment/appointment-fil2001-after-s14: Appointment.appointmentType: None of the codings provided are in the value set 'hl7VS-appointmentReasonCodes' (http://terminology.hl7.org/ValueSet/v2-0276|3.0.0), and a coding is recommended to come from this value set (codes = http://terminology.hl7.org/CodeSystem/v2-0276#FOLLOWUP)
+
+
+== fsh-generated/resources/Appointment-appointment-fil2001-after-s15.json ==
+WARNING: Appointment/appointment-fil2001-after-s15: Appointment.cancelationReason.coding[0].system: A definition for CodeSystem 'http://example.org/fhir/CodeSystem/v2-local/LOCAL' could not be found, so the code cannot be validated
+WARNING: Appointment/appointment-fil2001-after-s15: Appointment.serviceType[0].coding[0].system: A definition for CodeSystem 'http://example.org/fhir/CodeSystem/v2-local/LOCAL' could not be found, so the code cannot be validated
+ERROR: Appointment/appointment-fil2001-after-s15: Appointment.appointmentType.coding[0].display: Wrong Display Name 'Follow-up' for http://terminology.hl7.org/CodeSystem/v2-0276#FOLLOWUP. Valid display is 'A follow up visit from a previous appointment' (for the language(s) 'en-AU')
+INFORMATION: Appointment/appointment-fil2001-after-s15: Appointment.appointmentType: None of the codings provided are in the value set 'hl7VS-appointmentReasonCodes' (http://terminology.hl7.org/ValueSet/v2-0276|3.0.0), and a coding is recommended to come from this value set (codes = http://terminology.hl7.org/CodeSystem/v2-0276#FOLLOWUP)
+
+
+== fsh-generated/resources/Appointment-appointment-fil2002.json ==
+WARNING: Appointment/appointment-fil2002: Appointment.serviceType[0].coding[0].system: A definition for CodeSystem 'http://example.org/fhir/CodeSystem/v2-local/LOCAL' could not be found, so the code cannot be validated
+ERROR: Appointment/appointment-fil2002: Appointment.appointmentType.coding[0].display: Wrong Display Name 'Routine' for http://terminology.hl7.org/CodeSystem/v2-0276#ROUTINE. Valid display is 'Routine appointment - default if not valued' (for the language(s) 'en-AU')
+INFORMATION: Appointment/appointment-fil2002: Appointment.appointmentType: None of the codings provided are in the value set 'hl7VS-appointmentReasonCodes' (http://terminology.hl7.org/ValueSet/v2-0276|3.0.0), and a coding is recommended to come from this value set (codes = http://terminology.hl7.org/CodeSystem/v2-0276#ROUTINE)
+
+
+== fsh-generated/resources/Appointment-appointment-fil2003.json ==
+WARNING: Appointment/appointment-fil2003: Appointment.serviceType[0].coding[0].system: A definition for CodeSystem 'http://example.org/fhir/CodeSystem/v2-local/LOCAL' could not be found, so the code cannot be validated
+
+
+== fsh-generated/resources/CodeSystem-siu2fhir-tag.json ==
+WARNING: Resource: The resource CodeSystem/siu2fhir-tag should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/ConceptMap-HL70001ToAdministrativeGender.json ==
+WARNING: ConceptMap/HL70001ToAdministrativeGender: ConceptMap.group[0]: There are multiple different potential matches for the url 'http://terminology.hl7.org/CodeSystem/v2-0001'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '3.0.0', found versions: 2.0.0 (from hl7.terminology.r4#6.2.0), 3.0.0 (from hl7.terminology.r4#7.0.1). Suggested fix: change the canonical reference from 'http://terminology.hl7.org/CodeSystem/v2-0001' to 'http://terminology.hl7.org/CodeSystem/v2-0001|3.0.0'
+INFORMATION: Resource: The resource ConceptMap/HL70001ToAdministrativeGender could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/ConceptMap-HL70278ToAppointmentStatus.json ==
+ERROR: ConceptMap/HL70278ToAppointmentStatus: ConceptMap.group[0].element[8].target[0]: Constraint failed: cmd-1: 'If the map is narrower or inexact, there SHALL be some comments (comment.exists() or equivalence.empty() or ((equivalence != 'narrower') and (equivalence != 'inexact')))'
+WARNING: ConceptMap/HL70278ToAppointmentStatus: ConceptMap.group[0]: There are multiple different potential matches for the url 'http://terminology.hl7.org/CodeSystem/v2-0278'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '3.0.0', found versions: 2.0.0 (from hl7.terminology.r4#6.2.0), 3.0.0 (from hl7.terminology.r4#7.0.1). Suggested fix: change the canonical reference from 'http://terminology.hl7.org/CodeSystem/v2-0278' to 'http://terminology.hl7.org/CodeSystem/v2-0278|3.0.0'
+WARNING: ConceptMap/HL70278ToAppointmentStatus: ConceptMap.group[0].element[6].target[0]: The code Cancelled is mapped to cancelled as 'equivalent', and Discontinued is mapped to cancelled as 'source-is-narrower-than-target', which means that Cancelled should subsume Discontinued, but it does not
+WARNING: ConceptMap/HL70278ToAppointmentStatus: ConceptMap.group[0].element[7].target[0]: The code Cancelled is mapped to cancelled as 'equivalent', and DC is mapped to cancelled as 'source-is-narrower-than-target', which means that Cancelled should subsume DC, but it does not
+WARNING: ConceptMap/HL70278ToAppointmentStatus: ConceptMap.group[0].element[10].target[0]: The code Booked is mapped to booked as 'equivalent', and Overbook is mapped to booked as 'source-is-narrower-than-target', which means that Booked should subsume Overbook, but it does not
+INFORMATION: Resource: The resource ConceptMap/HL70278ToAppointmentStatus could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/ImplementationGuide-example.fhir.siu2fhir.au.json ==
+INFORMATION: Resource: The resource ImplementationGuide/example.fhir.siu2fhir.au could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/Location-location-satellite-opd-physio1.json ==
+
+
+== fsh-generated/resources/Location-location-simhosp-opd-clinic1.json ==
+WARNING: Location/location-simhosp-opd-clinic1: Location.type[0].coding[0].system: A definition for CodeSystem 'http://example.org/fhir/CodeSystem/v2-local/LOCAL' could not be found, so the code cannot be validated
+WARNING: Location/location-simhosp-opd-clinic1: Location.address: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-address, http://hl7.org/fhir/StructureDefinition/Address
+WARNING: Location/location-simhosp-opd-clinic1: Location.address.state: ValueSet 'https://healthterminologies.gov.au/fhir/ValueSet/australian-states-territories-2' not found (validating against http://hl7.org.au/fhir/StructureDefinition/au-address|6.0.0 [AustralianAddress])
+
+
+== fsh-generated/resources/Organization-organization-satellite.json ==
+INFORMATION: Organization/organization-satellite: Organization.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization|2.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Organization/organization-satellite: Organization.meta.tag[0]: Reference to experimental CodeSystem http://example.org/fhir/siu2fhir-au/CodeSystem/siu2fhir-tag|0.1.0
+ERROR: Organization/organization-satellite: Organization.meta.tag[0].display: Wrong Display Name 'Placeholder created from an SIU message - needs curation' for http://example.org/fhir/siu2fhir-au/CodeSystem/siu2fhir-tag#placeholder. Valid display is 'Placeholder' (for the language(s) 'en-AU')
+
+
+== fsh-generated/resources/Organization-organization-simhosp.json ==
+INFORMATION: Organization/organization-simhosp: Organization.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization|2.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+WARNING: Organization/organization-simhosp: Organization.address[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-address, http://hl7.org/fhir/StructureDefinition/Address
+WARNING: Organization/organization-simhosp: Organization.address[0].state: ValueSet 'https://healthterminologies.gov.au/fhir/ValueSet/australian-states-territories-2' not found (validating against http://hl7.org.au/fhir/StructureDefinition/au-address|6.0.0 [AustralianAddress])
+
+
+== fsh-generated/resources/Patient-patient-900001.json ==
+INFORMATION: Patient/patient-900001: Patient.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient|2.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+WARNING: Patient/patient-900001: Patient.extension[0].value.ofType(Coding): ValueSet 'https://healthterminologies.gov.au/fhir/ValueSet/australian-indigenous-status-1' not found
+INFORMATION: Patient/patient-900001: Patient.extension[0].value.ofType(Coding).system: A definition for CodeSystem 'https://healthterminologies.gov.au/fhir/CodeSystem/australian-indigenous-status-1' could not be found, so the code cannot be validated
+WARNING: Patient/patient-900001: Patient.identifier[1]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-ihi, http://hl7.org/fhir/StructureDefinition/Identifier
+WARNING: Patient/patient-900001: Patient.identifier[2].system: No definition could be found for URL value 'http://ns.electronichealth.net.au/id/medicare-number'
+WARNING: Patient/patient-900001: Patient.identifier[2]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-medicarecardnumber, http://hl7.org/fhir/StructureDefinition/Identifier
+WARNING: Patient/patient-900001: Patient.identifier[2].system: No definition could be found for URL value 'http://ns.electronichealth.net.au/id/medicare-number' (validating against http://hl7.org.au/fhir/StructureDefinition/au-medicarecardnumber|6.0.0 [AUMedicareCardNumber])
+WARNING: Patient/patient-900001: Patient.identifier[2].system: No definition could be found for URL value 'http://ns.electronichealth.net.au/id/medicare-number' (validating against http://hl7.org/fhir/StructureDefinition/Identifier|4.0.1 [Identifier])
+WARNING: Patient/patient-900001: Patient.address[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-address, http://hl7.org/fhir/StructureDefinition/Address
+WARNING: Patient/patient-900001: Patient.address[0].state: ValueSet 'https://healthterminologies.gov.au/fhir/ValueSet/australian-states-territories-2' not found (validating against http://hl7.org.au/fhir/StructureDefinition/au-address|6.0.0 [AustralianAddress])
+WARNING: Patient/patient-900001: Patient.communication[0].language: ValueSet 'https://healthterminologies.gov.au/fhir/ValueSet/common-languages-australia-2' not found
+
+
+== fsh-generated/resources/Patient-patient-900002.json ==
+INFORMATION: Patient/patient-900002: Patient.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient|2.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+
+
+== fsh-generated/resources/Patient-patient-900003.json ==
+INFORMATION: Patient/patient-900003: Patient.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient|2.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Patient/patient-900003: Patient.birthDate.extension[0]: This element does not match any known slice defined in the profile http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient|2.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+
+
+== fsh-generated/resources/Practitioner-practitioner-2426621b.json ==
+INFORMATION: Practitioner/practitioner-2426621b: Practitioner.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner|2.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+WARNING: Practitioner/practitioner-2426621b: Practitioner.identifier[0].system: No definition could be found for URL value 'http://ns.electronichealth.net.au/id/medicare-provider-number'
+
+
+== fsh-generated/resources/Practitioner-practitioner-8003619900004562.json ==
+WARNING: Practitioner/practitioner-8003619900004562: Practitioner.identifier[0].system: No definition could be found for URL value 'http://ns.electronichealth.net.au/id/hi/hpii/1.0'
+WARNING: Practitioner/practitioner-8003619900004562: Practitioner.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-hpii, http://hl7.org/fhir/StructureDefinition/Identifier
+WARNING: Practitioner/practitioner-8003619900004562: Practitioner.identifier[0].system: No definition could be found for URL value 'http://ns.electronichealth.net.au/id/hi/hpii/1.0' (validating against http://hl7.org/fhir/StructureDefinition/Identifier|4.0.1 [Identifier])
+WARNING: Practitioner/practitioner-8003619900004562: Practitioner.identifier[0].system: No definition could be found for URL value 'http://ns.electronichealth.net.au/id/hi/hpii/1.0' (validating against http://hl7.org.au/fhir/StructureDefinition/au-hpii|6.0.0 [AUHPII])
+
+
+== fsh-generated/resources/StructureDefinition-siu-au-appointment.json ==
+INFORMATION: StructureDefinition/siu-au-appointment: StructureDefinition.snapshot.element[4].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.4.0 is deprecated with the note: 'Use additionalBinding extension or element instead'
+WARNING: StructureDefinition/siu-au-appointment: StructureDefinition.snapshot.element[25].binding.valueSet: There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v2-0276'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '3.0.0', found versions: 2.0.0 (from hl7.terminology.r4#6.2.0), 3.0.0 (from hl7.terminology.r4#7.5.0). Suggested fix: change the canonical reference from 'http://terminology.hl7.org/ValueSet/v2-0276' to 'http://terminology.hl7.org/ValueSet/v2-0276|3.0.0'
+WARNING: StructureDefinition/siu-au-appointment: StructureDefinition.differential.element[5].binding: The definition for the element 'Appointment.identifier.type' binds to the value set 'http://example.org/fhir/siu2fhir-au/ValueSet/appointment-identifier-type' which is experimental, but this structure is not labeled as experimental
+WARNING: StructureDefinition/siu-au-appointment: StructureDefinition.snapshot.element[15].binding: The definition for the element 'Appointment.identifier.type' binds to the value set 'http://example.org/fhir/siu2fhir-au/ValueSet/appointment-identifier-type' which is experimental, but this structure is not labeled as experimental
+INFORMATION: Resource: The resource StructureDefinition/siu-au-appointment could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-source-message-control-id.json ==
+INFORMATION: Resource: The resource StructureDefinition/source-message-control-id could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-source-message-datetime.json ==
+INFORMATION: Resource: The resource StructureDefinition/source-message-datetime could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/ValueSet-appointment-identifier-type.json ==
+INFORMATION: ValueSet.compose.include[0]: Pinned the version of http://terminology.hl7.org/CodeSystem/v2-0203 to 5.0.0 from choices of 4.0.0 (hl7.terminology#5.5.0), 5.0.0 (hl7.terminology.r4#7.5.0)
+WARNING: Resource: The resource ValueSet/appointment-identifier-type should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+

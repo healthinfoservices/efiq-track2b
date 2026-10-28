@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Appointment xmlns="http://hl7.org/fhir">
+  <id value="appointment-fil2003"/>
+  <meta>
+    <profile value="http://example.org/fhir/siu2fhir-au/StructureDefinition/siu-au-appointment"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Appointment appointment-fil2003</b></p><a name="appointment-fil2003"> </a><a name="hcappointment-fil2003"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-siu-au-appointment.html">SIU AU Appointment</a></p></div><p><b>Source Message Date/Time</b>: 2026-10-07 09:50:00+1000</p><p><b>Source Message Control ID</b>: MSG0006</p><p><b>identifier</b>: Filler Identifier/FIL2003, Placer Identifier/PLC1003</p><p><b>status</b>: Booked</p><p><b>serviceType</b>: <span title="Codes:{http://example.org/fhir/CodeSystem/v2-local/LOCAL GPCONS}">General consultation</span></p><p><b>start</b>: 2026-10-17 09:00:00+1000</p><p><b>end</b>: 2026-10-17 09:15:00+1000</p><p><b>minutesDuration</b>: 15</p><blockquote><p><b>participant</b></p><p><b>actor</b>: <a href="Patient-patient-900003.html">CHARLIE</a></p><p><b>required</b>: Required</p><p><b>status</b>: Accepted</p></blockquote><blockquote><p><b>participant</b></p><p><b>type</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ParticipationType ATND}">Attending</span></p><p><b>actor</b>: ANON</p><p><b>status</b>: Accepted</p></blockquote></div>
+  </text>
+  <extension url="http://example.org/fhir/siu2fhir-au/StructureDefinition/source-message-datetime">
+    <valueDateTime value="2026-10-07T09:50:00+10:00"/>
+  </extension>
+  <extension url="http://example.org/fhir/siu2fhir-au/StructureDefinition/source-message-control-id">
+    <valueString value="MSG0006"/>
+  </extension>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="FILL"/>
+      </coding>
+    </type>
+    <system value="http://example.org/fhir/sid/appointment/filler/SCHED"/>
+    <value value="FIL2003"/>
+  </identifier>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="PLAC"/>
+      </coding>
+    </type>
+    <system value="http://example.org/fhir/sid/appointment/placer/PAS"/>
+    <value value="PLC1003"/>
+  </identifier>
+  <status value="booked"/>
+  <serviceType>
+    <coding>
+      <system value="http://example.org/fhir/CodeSystem/v2-local/LOCAL"/>
+      <code value="GPCONS"/>
+      <display value="General consultation"/>
+    </coding>
+    <text value="General consultation"/>
+  </serviceType>
+  <start value="2026-10-17T09:00:00+10:00"/>
+  <end value="2026-10-17T09:15:00+10:00"/>
+  <minutesDuration value="15"/>
+  <participant>
+    <actor>
+      <reference value="Patient/patient-900003"/>
+      <display value="CHARLIE"/>
+    </actor>
+    <required value="required"/>
+    <status value="accepted"/>
+  </participant>
+  <participant>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType"/>
+        <code value="ATND"/>
+      </coding>
+      <text value="Attending"/>
+    </type>
+    <actor>
+      <display value="ANON"/>
+    </actor>
+    <status value="accepted"/>
+  </participant>
+</Appointment>

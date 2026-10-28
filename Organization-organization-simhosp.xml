@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="organization-simhosp"/>
+  <meta>
+    <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Organization organization-simhosp</b></p><a name="organization-simhosp"> </a><a name="hcorganization-simhosp"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="http://hl7.org.au/fhir/core/2.0.0/StructureDefinition-au-core-organization.html">AU Core Organization</a></p></div><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Simulated Hospital (http://example.org/fhir/sid/organization#SIMHOSP)</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Record is active">Active:</td><td colspan="3">true</td></tr><tr><td style="background-color: #f3f5da" title="Ways to contact the organization">Contact Detail</td><td colspan="3"><ul><li>ph: 07 0000 0000(Work)</li><li>1 Simulated Way, Brisbane, QLD 4000(work)</li></ul></td></tr></table></div>
+  </text>
+  <identifier>
+    <system value="http://example.org/fhir/sid/organization"/>
+    <value value="SIMHOSP"/>
+  </identifier>
+  <active value="true"/>
+  <name value="Simulated Hospital"/>
+  <telecom>
+    <system value="phone"/>
+    <value value="07 0000 0000"/>
+    <use value="work"/>
+  </telecom>
+  <address>
+    <use value="work"/>
+    <type value="physical"/>
+    <text value="1 Simulated Way, Brisbane, QLD 4000"/>
+    <line value="1 Simulated Way"/>
+    <city value="Brisbane"/>
+    <state value="QLD"/>
+    <postalCode value="4000"/>
+    <country value="AU"/>
+  </address>
+</Organization>

@@ -1,0 +1,74 @@
+{
+  "resourceType" : "Appointment",
+  "id" : "appointment-fil2002",
+  "meta" : {
+    "profile" : ["http://example.org/fhir/siu2fhir-au/StructureDefinition/siu-au-appointment"]
+  },
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Appointment appointment-fil2002</b></p><a name=\"appointment-fil2002\"> </a><a name=\"hcappointment-fil2002\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-siu-au-appointment.html\">SIU AU Appointment</a></p></div><p><b>Source Message Date/Time</b>: 2026-10-07 09:40:00+1000</p><p><b>Source Message Control ID</b>: MSG0005</p><p><b>identifier</b>: Filler Identifier/FIL2002, Placer Identifier/PLC1002</p><p><b>status</b>: Booked</p><p><b>serviceType</b>: <span title=\"Codes:{http://example.org/fhir/CodeSystem/v2-local/LOCAL PHYSIO}\">Physiotherapy</span></p><p><b>appointmentType</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0276 ROUTINE}\">Routine</span></p><p><b>start</b>: 2026-10-16 14:00:00+1000</p><p><b>end</b>: 2026-10-16 14:45:00+1000</p><p><b>minutesDuration</b>: 45</p><blockquote><p><b>participant</b></p><p><b>actor</b>: <a href=\"Patient-patient-900002.html\">BOB TESTPATIENT</a></p><p><b>required</b>: Required</p><p><b>status</b>: Accepted</p></blockquote><blockquote><p><b>participant</b></p><p><b>actor</b>: <a href=\"Location-location-satellite-opd-physio1.html\">Physio Room 1</a></p><p><b>status</b>: Accepted</p></blockquote></div>"
+  },
+  "extension" : [{
+    "url" : "http://example.org/fhir/siu2fhir-au/StructureDefinition/source-message-datetime",
+    "valueDateTime" : "2026-10-07T09:40:00+10:00"
+  },
+  {
+    "url" : "http://example.org/fhir/siu2fhir-au/StructureDefinition/source-message-control-id",
+    "valueString" : "MSG0005"
+  }],
+  "identifier" : [{
+    "type" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+        "code" : "FILL"
+      }]
+    },
+    "system" : "http://example.org/fhir/sid/appointment/filler/SCHED",
+    "value" : "FIL2002"
+  },
+  {
+    "type" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+        "code" : "PLAC"
+      }]
+    },
+    "system" : "http://example.org/fhir/sid/appointment/placer/PAS",
+    "value" : "PLC1002"
+  }],
+  "status" : "booked",
+  "serviceType" : [{
+    "coding" : [{
+      "system" : "http://example.org/fhir/CodeSystem/v2-local/LOCAL",
+      "code" : "PHYSIO",
+      "display" : "Physiotherapy"
+    }],
+    "text" : "Physiotherapy"
+  }],
+  "appointmentType" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v2-0276",
+      "code" : "ROUTINE",
+      "display" : "Routine"
+    }],
+    "text" : "Routine"
+  },
+  "start" : "2026-10-16T14:00:00+10:00",
+  "end" : "2026-10-16T14:45:00+10:00",
+  "minutesDuration" : 45,
+  "participant" : [{
+    "actor" : {
+      "reference" : "Patient/patient-900002",
+      "display" : "BOB TESTPATIENT"
+    },
+    "required" : "required",
+    "status" : "accepted"
+  },
+  {
+    "actor" : {
+      "reference" : "Location/location-satellite-opd-physio1",
+      "display" : "Physio Room 1"
+    },
+    "status" : "accepted"
+  }]
+}

@@ -53,6 +53,7 @@ pages:
 
 menu:
   Home: index.html
+  Architecture: architecture.html
   AU Core: au-core.html
   Adapter Specification: adapter-specification.html
   Mapping: mapping.html
